@@ -1,0 +1,17 @@
+Resources:
+  IACUser:
+    Type: "AWS::IAM::User"
+    Properties:
+      UserName: iacuser
+
+  IACUserPolicy:
+    Type: "AWS::IAM::UserPolicy"
+    Properties:
+      UserName: !Ref IACUser
+      PolicyName: AdministratorAccess
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action: "*"
+            Resource: "*"
