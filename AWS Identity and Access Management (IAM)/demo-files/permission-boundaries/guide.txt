@@ -1,0 +1,14 @@
+Create userboundary policy.
+
+Create adminboundary policy.
+
+Create adminpermission policy.
+
+Create user "bob" > attach "adminpermission" policy + "adminboundary" policy as permission boundary.
+
+Login as "bob"
+
+Add user "max" attach "administrator" policy > create (wont work)
+
+Add user "max" attach "administrator" policy + "userboundary" policy as permission boundary > create
+
