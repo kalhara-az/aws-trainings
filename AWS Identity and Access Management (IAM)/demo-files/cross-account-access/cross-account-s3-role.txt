@@ -1,0 +1,25 @@
+Switch role to prod account
+
+Create an IAM Role with  name (CrossAccountS3Role).
+
+Trusted entity type - Custom > 
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::<SOURCE_ACCOUNT_ID>:root",
+          "arn:aws:iam::<SOURCE_ACCOUNT_ID>:user/iamadmin"
+        ]
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {}
+    }
+  ]
+}
+
+Add S3 admin
+
