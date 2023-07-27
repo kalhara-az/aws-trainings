@@ -1,4 +1,4 @@
-# AWS SAA-C02 Study Guide
+# AWS SAA-C03 Study Guide
 
 
 ## Table of Contents
